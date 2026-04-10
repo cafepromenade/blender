@@ -347,10 +347,10 @@ set(OSL_HOMEPAGE https://github.com/AcademySoftwareFoundation/OpenShadingLanguag
 set(OSL_LICENSE SPDX:BSD-3-Clause)
 set(OSL_COPYRIGHT "Copyright (c) 2009-present Contributors to the Open Shading Language project.")
 
-set(MANIFOLD_VERSION v3.4.0)
+set(MANIFOLD_VERSION v3.4.1)
 set(MANIFOLD_NAME "Manifold")
 set(MANIFOLD_URI https://github.com/elalish/manifold/archive/refs/tags/${MANIFOLD_VERSION}.tar.gz)
-set(MANIFOLD_HASH e065fa7ff7eff5193e30775fc5d976cb)
+set(MANIFOLD_HASH 1fd7e7741cae23db2956159d42ea7017)
 set(MANIFOLD_HASH_TYPE MD5)
 set(MANIFOLD_FILE Manifold-${MANIFOLD_VERSION}.tar.gz)
 set(MANIFOLD_HOMEPAGE https://github.com/elalish/manifold)
