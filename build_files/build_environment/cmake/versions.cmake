@@ -337,10 +337,10 @@ Copyright © 1988-1997 Sam Leffler.
 Copyright © 1991-1997 Silicon Graphics, Inc.
 ]=])
 
-set(OSL_VERSION 1.15.1.0)
+set(OSL_VERSION 1.15.3.0)
 set(OSL_NAME "Open Shading Language")
 set(OSL_URI https://github.com/AcademySoftwareFoundation/OpenShadingLanguage/releases/download/v${OSL_VERSION}/OSL-${OSL_VERSION}.tar.gz)
-set(OSL_HASH 4083ca1b0afcefc7d62d52a557693a6c5550eb2d1057b3afb15a1a101a3389fa)
+set(OSL_HASH 560232b3298e33f3bf45c6f21f20b484f5acc260f6d4035db0f76f22994d679a)
 set(OSL_HASH_TYPE SHA256)
 set(OSL_FILE OpenShadingLanguage-${OSL_VERSION}.tar.gz)
 set(OSL_HOMEPAGE https://github.com/AcademySoftwareFoundation/OpenShadingLanguage/)
