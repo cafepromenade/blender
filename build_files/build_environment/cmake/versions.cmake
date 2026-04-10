@@ -477,8 +477,9 @@ set(SETUPTOOLS_VERSION 80.9.0)
 set(SETUPTOOLS_SCM_VERSION 9.2.2)
 set(MESON_PYTHON_VERSION 0.18.0)
 set(PACKAGING_VERSION 25.0) # meson-python dep
-set(PYPROJECT_METADATA_VERSION  0.9.1) # meson-python dep
-
+set(PYPROJECT_METADATA_VERSION 0.9.1) # meson-python dep
+# tomli-w - A lil' TOML writer (see dependency request issue #155758)
+set(TOMLI_W_VERSION 1.2.0)
 
 
 # When this numpy version is bumped, please also change the limit value set for variable `install_requires`
