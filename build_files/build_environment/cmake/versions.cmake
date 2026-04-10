@@ -61,18 +61,18 @@ Copyright (c) 2015, Archontis Politis.
 Copyright (c) 2019, Christopher Robinson.
 ]=])
 
-set(PNG_VERSION 1.6.50)
+set(PNG_VERSION 1.6.55)
 set(PNG_NAME libpng)
 set(PNG_URI http://prdownloads.sourceforge.net/libpng/libpng-${PNG_VERSION}.tar.xz)
-set(PNG_HASH 4df396518620a7aa3651443e87d1b2862e4e88cad135a8b93423e01706232307)
+set(PNG_HASH d925722864837ad5ae2a82070d4b2e0603dc72af44bd457c3962298258b8e82d)
 set(PNG_HASH_TYPE SHA256)
 set(PNG_FILE libpng-${PNG_VERSION}.tar.xz)
 set(PNG_CPE "cpe:2.3:a:libpng:libpng:${PNG_VERSION}:*:*:*:*:*:*:*")
 set(PNG_HOMEPAGE http://www.libpng.org/pub/png/libpng.html)
 set(PNG_LICENSE SPDX:libpng-2.0)
 set(PNG_COPYRIGHT [=[
-Copyright (c) 1995-2019 The PNG Reference Library Authors.
-Copyright (c) 2018-2019 Cosmin Truta.
+Copyright (c) 1995-2026 The PNG Reference Library Authors.
+Copyright (c) 2018-2026 Cosmin Truta.
 Copyright (c) 2000-2002, 2004, 2006-2018 Glenn Randers-Pehrson.
 Copyright (c) 1996-1997 Andreas Dilger.
 Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.
@@ -292,10 +292,10 @@ set(LLVM_HOMEPAGE https://github.com/llvm/llvm-project/)
 set(LLVM_LICENSE SPDX:Apache-2.0 WITH LLVM-exception)
 set(LLVM_COPYRIGHT "Copyright (c) 2003-2019 University of Illinois at Urbana-Champaign. All rights reserved.")
 
-set(OPENIMAGEIO_VERSION v3.1.7.0)
+set(OPENIMAGEIO_VERSION v3.1.12.0)
 set(OPENIMAGEIO_NAME OpenImageIO)
 set(OPENIMAGEIO_URI https://github.com/AcademySoftwareFoundation/OpenImageIO/archive/refs/tags/${OPENIMAGEIO_VERSION}.tar.gz)
-set(OPENIMAGEIO_HASH 951527a755911320659d4e23bb8e5ad9)
+set(OPENIMAGEIO_HASH 4f7cb0e132117613d828439d987e187c)
 set(OPENIMAGEIO_HASH_TYPE MD5)
 set(OPENIMAGEIO_FILE OpenImageIO-${OPENIMAGEIO_VERSION}.tar.gz)
 set(OPENIMAGEIO_HOMEPAGE https://github.com/AcademySoftwareFoundation/OpenImageIO)
@@ -337,25 +337,25 @@ Copyright © 1988-1997 Sam Leffler.
 Copyright © 1991-1997 Silicon Graphics, Inc.
 ]=])
 
-set(OSL_VERSION 1.14.7.0)
+set(OSL_VERSION 1.15.1.0)
 set(OSL_NAME "Open Shading Language")
 set(OSL_URI https://github.com/AcademySoftwareFoundation/OpenShadingLanguage/releases/download/v${OSL_VERSION}/OSL-${OSL_VERSION}.tar.gz)
-set(OSL_HASH 45b2b9de1bae6854fb8af0d332c3266898871d95741bdb6abe8178cd6d01aef2)
+set(OSL_HASH 4083ca1b0afcefc7d62d52a557693a6c5550eb2d1057b3afb15a1a101a3389fa)
 set(OSL_HASH_TYPE SHA256)
 set(OSL_FILE OpenShadingLanguage-${OSL_VERSION}.tar.gz)
 set(OSL_HOMEPAGE https://github.com/AcademySoftwareFoundation/OpenShadingLanguage/)
 set(OSL_LICENSE SPDX:BSD-3-Clause)
-set(OSL_COPYRIGHT "Copyright Contributors to the Open Shading Language project.")
+set(OSL_COPYRIGHT "Copyright (c) 2009-present Contributors to the Open Shading Language project.")
 
-set(MANIFOLD_VERSION v3.2.1)
+set(MANIFOLD_VERSION v3.4.0)
 set(MANIFOLD_NAME "Manifold")
 set(MANIFOLD_URI https://github.com/elalish/manifold/archive/refs/tags/${MANIFOLD_VERSION}.tar.gz)
-set(MANIFOLD_HASH 5618cc9685b15a0b7ba4783589c1ae7c)
+set(MANIFOLD_HASH e065fa7ff7eff5193e30775fc5d976cb)
 set(MANIFOLD_HASH_TYPE MD5)
 set(MANIFOLD_FILE Manifold-${MANIFOLD_VERSION}.tar.gz)
 set(MANIFOLD_HOMEPAGE https://github.com/elalish/manifold)
 set(MANIFOLD_LICENSE SPDX:Apache-2.0)
-set(MANIFOLD_COPYRIGHT "Copyright 2021 The Manifold Authors.")
+set(MANIFOLD_COPYRIGHT "Copyright 2021-2026 The Manifold Authors.")
 
 set(RUBBERBAND_VERSION 4.0.0)
 set(RUBBERBAND_NAME "Rubber Band Library")
@@ -826,19 +826,19 @@ set(SQLITE_CPE "cpe:2.3:a:sqlite:sqlite:${SQLITE_VERSION}:*:*:*:*:*:*:*")
 set(SQLITE_HOMEPAGE https://www.sqlite.org)
 set(SQLITE_LICENSE Public Domain)
 
-set(EMBREE_VERSION 4.4.0)
+set(EMBREE_VERSION 4.4.1)
 set(EMBREE_URI https://github.com/RenderKit/embree/archive/v${EMBREE_VERSION}.zip)
-set(EMBREE_HASH 56e5f414b9ae441b366be79867b8fb07)
+set(EMBREE_HASH 6e2eecafb312d8cf1f1ff555702637cf)
 set(EMBREE_HASH_TYPE MD5)
 set(EMBREE_FILE embree-v${EMBREE_VERSION}.zip)
 set(EMBREE_HOMEPAGE https://github.com/RenderKit/embree)
 set(EMBREE_LICENSE SPDX:Apache-2.0)
 set(EMBREE_COPYRIGHT "Copyright 2009-2024 Intel Corporation")
 
-set(USD_VERSION 25.08)
+set(USD_VERSION 26.03)
 set(USD_NAME USD)
 set(USD_URI https://github.com/PixarAnimationStudios/OpenUSD/archive/v${USD_VERSION}.tar.gz)
-set(USD_HASH e107ce8d79471ddd8b636bb982c24a46)
+set(USD_HASH cc6d6bffdcdd038f60e2fe4726b08673)
 set(USD_HASH_TYPE MD5)
 set(USD_FILE usd-v${USD_VERSION}.tar.gz)
 set(USD_HOMEPAGE https://openusd.org/)
@@ -1046,10 +1046,10 @@ set(BROTLI_HOMEPAGE https://github.com/google/brotli)
 set(BROTLI_LICENSE SPDX:MIT)
 set(BROTLI_COPYRIGHT "Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors.")
 
-set(OPENPGL_VERSION v0.6.0)
-set(OPENPGL_SHORT_VERSION 0.6.0)
+set(OPENPGL_VERSION v0.7.1)
+set(OPENPGL_SHORT_VERSION 0.7.1)
 set(OPENPGL_URI https://github.com/OpenPathGuidingLibrary/openpgl/archive/refs/tags/${OPENPGL_VERSION}.tar.gz)
-set(OPENPGL_HASH 4192a4096ee3e3d31878cd013f8de23418c8037c576537551f946c4811931c5e)
+set(OPENPGL_HASH d62d24241232a526491328f341df9add274fc84ae9818470d3edb5ae6141ac63)
 set(OPENPGL_HASH_TYPE SHA256)
 set(OPENPGL_FILE openpgl-${OPENPGL_VERSION}.tar.gz)
 set(OPENPGL_NAME Open PGL)
@@ -1057,16 +1057,15 @@ set(OPENPGL_HOMEPAGE http://www.openpgl.org/)
 set(OPENPGL_LICENSE SPDX:Apache-2.0)
 set(OPENPGL_COPYRIGHT "Copyright 2020 Intel Corporation.")
 
-# Currently latest commit from sycl-rel-6_2 release branch
-set(DPCPP_VERSION 05e047c0932d5043ddff5e4058a3afca8e0943aa)
+set(DPCPP_VERSION v6.3.0)
 set(DPCPP_URI https://github.com/intel/llvm/archive/${DPCPP_VERSION}.tar.gz)
-set(DPCPP_HASH 94a51f89b212099a3d4c3530f2c2b6595b3b2a9ab40982cfab5055f92610b142)
+set(DPCPP_HASH 63fb431da91f29e1c4387b06707d3d9b2af2120e733d1a96357f043aa37591e8)
 set(DPCPP_HASH_TYPE SHA256)
 set(DPCPP_FILE DPCPP-${DPCPP_VERSION}.tar.gz)
 set(DPCPP_NAME DPC++)
 set(DPCPP_HOMEPAGE "https://github.com/intel/llvm#oneapi-dpc-compiler")
 set(DPCPP_LICENSE SPDX:Apache-2.0)
-set(DPCPP_COPYRIGHT "Copyright (C) 2021-2025 Intel Corporation")
+set(DPCPP_COPYRIGHT "Copyright (C) 2021-2026 Intel Corporation")
 
 ########################
 ### DPCPP DEPS BEGIN ###
@@ -1181,15 +1180,15 @@ set(PARALLEL_HASHMAP_COPYRIGHT "Copyright (c) 2019, Gregory Popovitch - greg7mdp
 # compiler, the versions used are taken from the following location
 # https://github.com/intel/intel-graphics-compiler/releases
 
-set(IGC_VERSION 2.16.0)
+set(IGC_VERSION 2.30.1)
 set(IGC_URI https://github.com/intel/intel-graphics-compiler/archive/refs/tags/v${IGC_VERSION}.tar.gz)
-set(IGC_HASH e8b74139d28e3c3be6acde94ac9e106af913dcaa495e2c687cdcb520f0a26538)
+set(IGC_HASH 4e5f46b20ec5c055f3cbfed16cfa9739b67f0d05786d736f3d10b09b11b171a3)
 set(IGC_HASH_TYPE SHA256)
 set(IGC_FILE intel-graphics-compiler-${IGC_VERSION}.tar.gz)
 set(IGC_NAME IGC)
 set(IGC_HOMEPAGE https://github.com/intel/intel-graphics-compiler)
 set(IGC_LICENSE SPDX:MIT)
-set(IGC_COPYRIGHT "Copyright (C) 2019-2024 Intel Corporation")
+set(IGC_COPYRIGHT "Copyright (C) 2019-2026 Intel Corporation")
 
 set(IGC_LLVM_VERSION llvmorg-15.0.7)
 set(IGC_LLVM_URI https://github.com/llvm/llvm-project/archive/refs/tags/${IGC_LLVM_VERSION}.tar.gz)
