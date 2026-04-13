@@ -53,7 +53,7 @@ ExternalProject_Add(external_python_site_packages
       cattrs==${CATTRS_VERSION}
       fastjsonschema==${FASTJSONSCHEMA_VERSION}
       typing-extensions==${TYPING_EXTENSIONS_VERSION}
-      tomli-w=${TOMLI_W_VERSION}
+      tomli-w==${TOMLI_W_VERSION}
       --no-binary :all:
 )
 
