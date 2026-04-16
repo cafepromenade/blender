@@ -1965,6 +1965,7 @@ if((DEFINED LIBDIR) AND TARGETDIR_LIB)
         ${LIBDIR}/usd/plugin/usd/hdStorm
         ${LIBDIR}/usd/plugin/usd/usdShaders
         ${LIBDIR}/usd/plugin/usd/hioOiio
+        ${LIBDIR}/usd/plugin/usd/hioOpenEXR
         DESTINATION "blender.shared/usd"
       )
     elseif(USD_PYTHON_SUPPORT)
