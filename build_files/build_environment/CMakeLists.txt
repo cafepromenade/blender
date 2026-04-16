@@ -101,11 +101,7 @@ if(NOT APPLE)
   endif()
 endif()
 include(cmake/ispc.cmake)
-if(BLENDER_PLATFORM_WINDOWS_ARM)
-  include(cmake/openpgl_windows_arm.cmake)
-else()
-  include(cmake/openpgl.cmake)
-endif()
+include(cmake/openpgl.cmake)
 # EMBREE needs to be included after `dpcpp` as it uses it for compiling with GPU support
 if(BLENDER_PLATFORM_WINDOWS_ARM)
   # WoA needs EMBREE to be built with the VS Generator + LLVM,
