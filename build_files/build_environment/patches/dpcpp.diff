@@ -52,55 +52,39 @@ diff --git a/sycl/cmake/modules/FetchUnifiedRuntime.cmake b/sycl/cmake/modules/F
 index 04602f22e..7bd7259d1 100644
 --- a/sycl/cmake/modules/FetchUnifiedRuntime.cmake
 +++ b/sycl/cmake/modules/FetchUnifiedRuntime.cmake
-@@ -89,10 +89,9 @@ if(IS_DIRECTORY "${UR_INTREE_SOURCE_DIR}")
+@@ -92,8 +92,9 @@ if(IS_DIRECTORY "${UR_INTREE_SOURCE_DIR}")
    # to link statically on windows
    if(WIN32)
      set(UMF_BUILD_SHARED_LIBRARY OFF CACHE INTERNAL "Build UMF shared library")
 -    set(UMF_LINK_HWLOC_STATICALLY ON CACHE INTERNAL "static HWLOC")
--  else()
--    set(UMF_DISABLE_HWLOC ${SYCL_UMF_DISABLE_HWLOC} CACHE INTERNAL "Disable hwloc for UMF")
    endif()
 +  set(UMF_LINK_HWLOC_STATICALLY OFF CACHE INTERNAL "static HWLOC")
 +  set(UMF_DISABLE_HWLOC ${SYCL_UMF_DISABLE_HWLOC} CACHE INTERNAL "Disable hwloc for UMF")
    add_subdirectory(${UNIFIED_RUNTIME_SOURCE_DIR} ${UR_INTREE_BINARY_DIR})
  elseif(SYCL_UR_USE_FETCH_CONTENT)
    include(FetchContent)
-@@ -148,10 +147,9 @@ elseif(SYCL_UR_USE_FETCH_CONTENT)
+@@ -149,8 +150,9 @@ elseif(SYCL_UR_USE_FETCH_CONTENT)
    # to link statically on windows
    if(WIN32)
      set(UMF_BUILD_SHARED_LIBRARY OFF CACHE INTERNAL "Build UMF shared library")
 -    set(UMF_LINK_HWLOC_STATICALLY ON CACHE INTERNAL "static HWLOC")
--  else()
--    set(UMF_DISABLE_HWLOC ${SYCL_UMF_DISABLE_HWLOC} CACHE INTERNAL "Disable hwloc for UMF")
    endif()
 +  set(UMF_LINK_HWLOC_STATICALLY OFF CACHE INTERNAL "static HWLOC")
 +  set(UMF_DISABLE_HWLOC ${SYCL_UMF_DISABLE_HWLOC} CACHE INTERNAL "Disable hwloc for UMF")
-
+ 
    fetch_adapter_source(level_zero
      ${UNIFIED_RUNTIME_REPO}
-@@ -363,6 +361,10 @@ if(CMAKE_SYSTEM_NAME STREQUAL Windows)
+@@ -362,6 +364,10 @@ if(CMAKE_SYSTEM_NAME STREQUAL Windows)
        -DUMF_LINK_HWLOC_STATICALLY:BOOL=${UMF_LINK_HWLOC_STATICALLY}
        -DUMF_DISABLE_HWLOC:BOOL=${UMF_DISABLE_HWLOC}
        -DSYCL_EMHASH_DIR:STRING=${SYCL_EMHASH_DIR}
 +      -DXPTIFW_PARALLEL_HASHMAP_HEADERS:STRING=${XPTIFW_PARALLEL_HASHMAP_HEADERS}
 +      -DPython3_ROOT_DIR:STRING=${Python3_ROOT_DIR}
 +      -DPython3_EXECUTABLE:STRING=${Python3_EXECUTABLE}
-+      -DPYTHON_EXECUTABLE:STRING=${PYTHON_EXECUTABLE}
++      -DPYTHON_EXECUTABLE:STRING=${PYTHON_EXECUTABLE}	  
        # Enable d suffix in UMF
        -DUMF_USE_DEBUG_POSTFIX:BOOL=ON
    )
-diff --git a/sycl/source/detail/graph_impl.hpp b/sycl/source/detail/graph_impl.hpp
-index 6045cc9ed..6ae24aade 100644
---- a/sycl/source/detail/graph_impl.hpp
-+++ b/sycl/source/detail/graph_impl.hpp
-@@ -29,6 +29,7 @@
- #include <list>
- #include <set>
- #include <shared_mutex>
-+#include <sstream>
-
- namespace sycl {
- inline namespace _V1 {
 diff --git a/sycl/source/detail/kernel_bundle_impl.hpp b/sycl/source/detail/kernel_bundle_impl.hpp
 index eefea331d..9f08546be 100644
 --- a/sycl/source/detail/kernel_bundle_impl.hpp
@@ -126,17 +110,6 @@ index 4d495ed06..e96d71870 100644
 
  #include <utility>
  #include <vector>
-diff --git a/sycl/unittests/CMakeLists.txt b/sycl/unittests/CMakeLists.txt
-index b2b6761b9..f9db10a86 100644
---- a/sycl/unittests/CMakeLists.txt
-+++ b/sycl/unittests/CMakeLists.txt
-@@ -1,6 +1,5 @@
- add_custom_target(SYCLUnitTests)
- set_target_properties(SYCLUnitTests PROPERTIES FOLDER "SYCL tests")
--include_directories(${BOOST_UNORDERED_INCLUDE_DIRS})
-
- foreach(flag_var
-     CMAKE_CXX_FLAGS CMAKE_CXX_FLAGS_DEBUG CMAKE_CXX_FLAGS_RELEASE
 diff --git a/unified-runtime/cmake/FetchLevelZero.cmake b/unified-runtime/cmake/FetchLevelZero.cmake
 index cf1ca5e82..ca23bd87e 100644
 --- a/unified-runtime/cmake/FetchLevelZero.cmake
@@ -209,3 +182,17 @@ index 223fe20aa..d9c8d8e46 100644
 
  #include <algorithm>
  #include <array>
+diff --git a/sycl/source/detail/kernel_name_based_cache_t.hpp b/sycl/source/detail/kernel_name_based_cache_t.hpp
+index ef92112..1792381 100644
+--- a/sycl/source/detail/kernel_name_based_cache_t.hpp
++++ b/sycl/source/detail/kernel_name_based_cache_t.hpp
+@@ -9,7 +9,7 @@
+ 
+ #include <detail/hashers.hpp>
+ #include <detail/kernel_arg_mask.hpp>
+-#include <emhash/hash_table8.hpp>
++#include <hash_table8.hpp>
+ #include <sycl/detail/spinlock.hpp>
+ #include <sycl/detail/ur.hpp>
+ 
+
