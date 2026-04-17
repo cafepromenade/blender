@@ -43,16 +43,16 @@ if(WIN32)
         ${LIBDIR}/thorvg/include
         ${HARVEST_TARGET}/thorvg/include
       COMMAND ${CMAKE_COMMAND} -E copy
-        ${LIBDIR}/thorvg/lib/libthorvg.a
-        ${HARVEST_TARGET}/thorvg/lib/libthorvg.lib
+        ${LIBDIR}/thorvg/lib/libthorvg-1.a
+        ${HARVEST_TARGET}/thorvg/lib/libthorvg-1.lib
       DEPENDEES install
     )
   endif()
   if(BUILD_MODE STREQUAL Debug)
     ExternalProject_Add_Step(external_thorvg after_install
       COMMAND ${CMAKE_COMMAND} -E copy
-        ${LIBDIR}/thorvg/lib/libthorvg.a
-        ${HARVEST_TARGET}/thorvg/lib/libthorvg_d.lib
+        ${LIBDIR}/thorvg/lib/libthorvg-1.a
+        ${HARVEST_TARGET}/thorvg/lib/libthorvg-1_d.lib
       DEPENDEES install
     )
   endif()
