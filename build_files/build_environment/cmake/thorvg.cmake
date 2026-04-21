@@ -19,6 +19,7 @@ ExternalProject_Add(external_thorvg
       --default-library static
       --libdir lib
       -Dloaders=svg
+      -Dextra=  # Set to none, disable building with OpenMP
       ${BUILD_DIR}/thorvg/src/external_thorvg-build
       ${BUILD_DIR}/thorvg/src/external_thorvg
 
