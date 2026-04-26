@@ -2,7 +2,6 @@ name: Sync fork with upstream
 
 on:
   schedule:
-    # Every hour at minute 17 UTC
     - cron: "17 * * * *"
 
   workflow_dispatch:
@@ -18,11 +17,16 @@ jobs:
   sync:
     runs-on: ubuntu-latest
 
+    env:
+      GIT_LFS_SKIP_SMUDGE: "1"
+      GIT_LFS_SKIP_PUSH: "1"
+
     steps:
       - name: Checkout fork
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          lfs: false
 
       - name: Configure Git
         run: |
@@ -71,12 +75,12 @@ jobs:
             if git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
               if git merge-base --is-ancestor "origin/$branch" "upstream/$branch"; then
                 echo "Fast-forwarding: $branch"
-                git push origin "refs/remotes/upstream/$branch:refs/heads/$branch"
+                GIT_LFS_SKIP_PUSH=1 git push origin "refs/remotes/upstream/$branch:refs/heads/$branch"
               else
                 echo "Skipping diverged branch: $branch"
               fi
             else
               echo "Creating missing branch: $branch"
-              git push origin "refs/remotes/upstream/$branch:refs/heads/$branch"
+              GIT_LFS_SKIP_PUSH=1 git push origin "refs/remotes/upstream/$branch:refs/heads/$branch"
             fi
           done
