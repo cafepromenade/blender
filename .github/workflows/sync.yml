@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: sync-fork-${{ github.repository }}
@@ -20,18 +20,37 @@ jobs:
     env:
       GIT_LFS_SKIP_SMUDGE: "1"
       GIT_LFS_SKIP_PUSH: "1"
+      PUSH_TOKEN: ${{ secrets.SYNC_TOKEN }}
 
     steps:
+      - name: Check token
+        run: |
+          set -euo pipefail
+
+          if [ -z "$PUSH_TOKEN" ]; then
+            echo "Missing SYNC_TOKEN secret."
+            echo "Create a PAT with Contents: Read/write and Workflows: Read/write."
+            exit 1
+          fi
+
       - name: Checkout fork
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           lfs: false
+          persist-credentials: false
 
       - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Configure authenticated origin
+        run: |
+          set -euo pipefail
+
+          server_host="${GITHUB_SERVER_URL#https://}"
+          git remote set-url origin "https://x-access-token:${PUSH_TOKEN}@${server_host}/${GITHUB_REPOSITORY}.git"
 
       - name: Detect upstream repo automatically
         id: upstream
