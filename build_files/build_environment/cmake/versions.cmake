@@ -61,10 +61,10 @@ Copyright (c) 2015, Archontis Politis.
 Copyright (c) 2019, Christopher Robinson.
 ]=])
 
-set(PNG_VERSION 1.6.55)
+set(PNG_VERSION 1.6.58)
 set(PNG_NAME libpng)
 set(PNG_URI http://prdownloads.sourceforge.net/libpng/libpng-${PNG_VERSION}.tar.xz)
-set(PNG_HASH d925722864837ad5ae2a82070d4b2e0603dc72af44bd457c3962298258b8e82d)
+set(PNG_HASH 28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775)
 set(PNG_HASH_TYPE SHA256)
 set(PNG_FILE libpng-${PNG_VERSION}.tar.xz)
 set(PNG_CPE "cpe:2.3:a:libpng:libpng:${PNG_VERSION}:*:*:*:*:*:*:*")
@@ -153,9 +153,9 @@ set(DEFLATE_HOMEPAGE https://github.com/ebiggers/libdeflate)
 set(DEFLATE_LICENSE SPDX:MIT)
 set(DEFLATE_COPYRIGHT "Copyright 2016 Eric Biggers")
 
-set(OPENEXR_VERSION 3.4.3)
+set(OPENEXR_VERSION 3.4.10)
 set(OPENEXR_URI https://github.com/AcademySoftwareFoundation/openexr/archive/v${OPENEXR_VERSION}.tar.gz)
-set(OPENEXR_HASH d6eb9e877a7cf4d0343c09512c1e2da5)
+set(OPENEXR_HASH 8926ba09c4e4cd21c7a0fa2d2b39fa82)
 set(OPENEXR_HASH_TYPE MD5)
 set(OPENEXR_FILE openexr-${OPENEXR_VERSION}.tar.gz)
 set(OPENEXR_CPE "cpe:2.3:a:openexr:openexr:${OPENEXR_VERSION}:*:*:*:*:*:*:*")
@@ -323,9 +323,9 @@ set(ROBINMAP_HOMEPAGE https://github.com/Tessil/robin-map)
 set(ROBINMAP_LICENSE SPDX:MIT)
 set(ROBINMAP_COPYRIGHT "Copyright (c) 2017 Thibaut Goetghebuer-Planchon <tessil@gmx.com>")
 
-set(TIFF_VERSION 4.7.0)
+set(TIFF_VERSION 4.7.1)
 set(TIFF_URI http://download.osgeo.org/libtiff/tiff-${TIFF_VERSION}.tar.gz)
-set(TIFF_HASH 3a0fa4a270a4a192b08913f88d0cfbdd)
+set(TIFF_HASH f1044dd3b4466cc53464210148e08146)
 set(TIFF_HASH_TYPE MD5)
 set(TIFF_FILE tiff-${TIFF_VERSION}.tar.gz)
 set(TIFF_CPE "cpe:2.3:a:libtiff:libtiff:${TIFF_VERSION}:*:*:*:*:*:*:*")
@@ -374,18 +374,23 @@ set(RUBBERBAND_COPYRIGHT "Copyright (c) 2025 Particular Programs Ltd")
 # Additionally, keep the PYTHON_PIP_VERSION in sync with the pip version bundled
 # into Python.
 
-set(PYTHON_VERSION 3.13.9)
+set(PYTHON_VERSION 3.13.13)
 set(PYTHON_SHORT_VERSION 3.13)
 set(PYTHON_SHORT_VERSION_NO_DOTS 313)
 set(PYTHON_URI https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tar.xz)
-set(PYTHON_HASH 516aabdf3de01eeefb6de1aacf9df810)
+set(PYTHON_HASH 3a19dd420883dd599728c9dd07c141e7)
 set(PYTHON_HASH_TYPE MD5)
 set(PYTHON_FILE Python-${PYTHON_VERSION}.tar.xz)
 set(PYTHON_CPE "cpe:2.3:a:python:python:${PYTHON_VERSION}:-:*:*:*:*:*:*")
 set(PYTHON_HOMEPAGE https://www.python.org/)
 set(PYTHON_NAME Python)
 set(PYTHON_LICENSE SPDX:Python-2.0)
-set(PYTHON_COPYRIGHT "Copyright (c) 2001-2023 Python Software Foundation. All rights reserved.")
+set(PYTHON_COPYRIGHT [=[
+Copyright © 2001 Python Software Foundation. All rights reserved.
+Copyright © 2000 BeOpen.com. All rights reserved.
+Copyright © 1995-2000 Corporation for National Research Initiatives. All rights reserved.
+Copyright © 1991-1995 Stichting Mathematisch Centrum. All rights reserved.
+]=])
 
 # Python bundles pip wheel, and does not track CVEs from it. Add an explicit CPE
 # identifier for pip, so that cve_check can detect vulnerabilities in it.
@@ -631,9 +636,9 @@ Copyright (c) 2019, Kakadu Software Pty Ltd, Australia
 Copyright (c) 2019, The University of New South Wales, Australia
 ]=])
 
-set(FFMPEG_VERSION 7.1.1)
+set(FFMPEG_VERSION 8.1)
 set(FFMPEG_URI http://ffmpeg.org/releases/ffmpeg-${FFMPEG_VERSION}.tar.bz2)
-set(FFMPEG_HASH 0c8da2f11579a01e014fc007cbacf5bb4da1d06afd0b43c7f8097ec7c0f143ba)
+set(FFMPEG_HASH c07039598df7d64d3c8b42c4e25b1959fc908621c6f6c2946881133f3b27eda2)
 set(FFMPEG_HASH_TYPE SHA256)
 set(FFMPEG_FILE ffmpeg-${FFMPEG_VERSION}.tar.bz2)
 set(FFMPEG_CPE "cpe:2.3:a:ffmpeg:ffmpeg:${FFMPEG_VERSION}:*:*:*:*:*:*:*")
@@ -695,9 +700,9 @@ set(SPNAV_HOMEPAGE https://github.com/FreeSpacenav/libspnav)
 set(SPNAV_LICENSE SPDX:BSD-3-Clause)
 set(SPNAV_COPYRIGHT "Copyright (C) 2007-2022 John Tsiombikas nuclear@member.fsf.org")
 
-set(XML2_VERSION 2.14.5)
+set(XML2_VERSION 2.14.6)
 set(XML2_URI https://download.gnome.org/sources/libxml2/2.14/libxml2-${XML2_VERSION}.tar.xz)
-set(XML2_HASH 59aac4e5d1d350ba2c4bddf1f7bc5098)
+set(XML2_HASH a2bb2b6cb8fc7be1fafa14f500e4f7c5)
 set(XML2_HASH_TYPE MD5)
 set(XML2_FILE libxml2-${XML2_VERSION}.tar.xz)
 set(XML2_CPE "cpe:2.3:a:xmlsoft:libxml2:${XML2_VERSION}:*:*:*:*:*:*:*")
@@ -724,10 +729,10 @@ set(PYSTRING_HOMEPAGE https://github.com/imageworks/pystring)
 set(PYSTRING_LICENSE SPDX:BSD-3-Clause)
 set(PYSTRING_COPYRIGHT "Copyright (c) 2008-2010, Sony Pictures Imageworks Inc; All rights reserved.")
 
-set(EXPAT_VERSION 2_7_2)
-set(EXPAT_VERSION_DOTS 2.7.2)
+set(EXPAT_VERSION 2_7_5)
+set(EXPAT_VERSION_DOTS 2.7.5)
 set(EXPAT_URI https://github.com/libexpat/libexpat/archive/R_${EXPAT_VERSION}.tar.gz)
-set(EXPAT_HASH 2f9776968172e360fbf385d99660ce28)
+set(EXPAT_HASH aecc4366ab1a5189d8f027c369305c9a)
 set(EXPAT_HASH_TYPE MD5)
 set(EXPAT_FILE libexpat-${EXPAT_VERSION}.tar.gz)
 set(EXPAT_HOMEPAGE https://github.com/libexpat/libexpat/)
@@ -735,7 +740,7 @@ set(EXPAT_CPE "cpe:2.3:a:libexpat_project:libexpat:${EXPAT_VERSION_DOTS}:*:*:*:*
 set(EXPAT_LICENSE SPDX:MIT)
 set(EXPAT_COPYRIGHT [=[
 Copyright (c) 1998-2000 Thai Open Source Software Center Ltd and Clark Cooper.
-Copyright (c) 2001-2019 Expat maintainers.
+Copyright (c) 2001-2025 Expat maintainers.
 ]=])
 
 set(PUGIXML_VERSION 1.10)
@@ -803,9 +808,9 @@ set(LZMA_LICENSE SPDX:GPL-3.0-or-later)
 set(LZMA_COPYRIGHT "Igor Pavlov, Ville Koskinen, Lasse Collin")
 
 # NOTE: Python's build has been modified to use our ssl version.
-set(SSL_VERSION 3.5.2)
+set(SSL_VERSION 3.5.6)
 set(SSL_URI https://www.openssl.org/source/openssl-${SSL_VERSION}.tar.gz)
-set(SSL_HASH c53a47e5e441c930c3928cf7bf6fb00e5d129b630e0aa873b08258656e7345ec)
+set(SSL_HASH deae7c80cba99c4b4f940ecadb3c3338b13cb77418409238e57d7f31f2a3b736)
 set(SSL_HASH_TYPE SHA256)
 set(SSL_FILE openssl-${SSL_VERSION}.tar.gz)
 set(SSL_CPE "cpe:2.3:a:openssl:openssl:${SSL_VERSION}:*:*:*:*:*:*:*")
@@ -813,14 +818,14 @@ set(SSL_HOMEPAGE https://www.openssl.org)
 set(SSL_NAME OpenSSL)
 set(SSL_LICENSE SPDX:Apache-2.0)
 set(SSL_COPYRIGHT [=[
-Copyright (c) 1998-2024 The OpenSSL Project Authors.
+Copyright (c) 1998-2026 The OpenSSL Project Authors.
 Copyright (c) 1995-1998 Eric A. Young, Tim J. Hudson; All rights reserved.
 ]=])
 
-set(SQLITE_VERSION 3.50.4)
-set(SQLLITE_LONG_VERSION 3500400)
-set(SQLITE_URI https://www.sqlite.org/2025/sqlite-autoconf-${SQLLITE_LONG_VERSION}.tar.gz)
-set(SQLITE_HASH 145048005c777796dd8494aa1cfed304e8c34283)
+set(SQLITE_VERSION 3.51.3)
+set(SQLLITE_LONG_VERSION 3510300)
+set(SQLITE_URI https://www.sqlite.org/2026/sqlite-autoconf-${SQLLITE_LONG_VERSION}.tar.gz)
+set(SQLITE_HASH d917ad1cde07987643571f0f5b55dd954fa8dee3)
 set(SQLITE_HASH_TYPE SHA1)
 set(SQLITE_FILE sqlite-autoconf-${SQLLITE_LONG_VERSION}.tar.gz)
 set(SQLITE_CPE "cpe:2.3:a:sqlite:sqlite:${SQLITE_VERSION}:*:*:*:*:*:*:*")
@@ -881,9 +886,9 @@ set(LIBGLU_HOMEPAGE https://gitlab.freedesktop.org/mesa/glu)
 set(LIBGLU_LICENSE SPDX:SGI-B-2.0)
 set(LIBGLU_COPYRIGHT "Copyright (C) 1991-2000 Silicon Graphics, Inc. All Rights Reserved.")
 
-set(MESA_VERSION 23.3.0)
+set(MESA_VERSION 25.3.6)
 set(MESA_URI https://archive.mesa3d.org/mesa-${MESA_VERSION}.tar.xz)
-set(MESA_HASH 50f729dd60ed6335b989095baad81ef5edf7cfdd4b4b48b9b955917cb07d69c5)
+set(MESA_HASH 59217efeac3b64e7ced958324b9db7494f1e0741aeb22d780276514cc1b8f206)
 set(MESA_HASH_TYPE SHA256)
 set(MESA_FILE mesa-${MESA_VERSION}.tar.xz)
 set(MESA_CPE "cpe:2.3:a:mesa3d:mesa:${MESA_VERSION}:*:*:*:*:*:*:*")
