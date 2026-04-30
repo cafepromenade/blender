@@ -1487,7 +1487,18 @@ elseif(WIN32)
       ALL
     )
   endif()
-  if(EXISTS "${LIBDIR}/ffmpeg/lib/avcodec-61.dll")
+  if(EXISTS "${LIBDIR}/ffmpeg/lib/avcodec-62.dll")
+    windows_install_shared_manifest(
+      FILES
+        ${LIBDIR}/ffmpeg/lib/avcodec-62.dll
+        ${LIBDIR}/ffmpeg/lib/avformat-62.dll
+        ${LIBDIR}/ffmpeg/lib/avdevice-62.dll
+        ${LIBDIR}/ffmpeg/lib/avutil-60.dll
+        ${LIBDIR}/ffmpeg/lib/swscale-9.dll
+        ${LIBDIR}/ffmpeg/lib/swresample-6.dll
+      ALL
+    )
+  elseif(EXISTS "${LIBDIR}/ffmpeg/lib/avcodec-61.dll")
     windows_install_shared_manifest(
       FILES
         ${LIBDIR}/ffmpeg/lib/avcodec-61.dll
