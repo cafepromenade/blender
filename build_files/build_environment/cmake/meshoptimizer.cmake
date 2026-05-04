@@ -2,8 +2,15 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-set(MESHOPTIMIZER_EXTRA_OPTIONS
+set(MESHOPTIMIZER_EXTRA_ARGS
 )
+
+if(WIN32)
+  set(MESHOPTIMIZER_EXTRA_ARGS
+    ${MESHOPTIMIZER_EXTRA_ARGS}
+    -DCMAKE_DEBUG_POSTFIX=_d
+  )
+endif()
 
 ExternalProject_Add(external_meshoptimizer
   URL file://${PACKAGE_DIR}/${MESHOPTIMIZER_FILE}
@@ -15,7 +22,7 @@ ExternalProject_Add(external_meshoptimizer
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX=${LIBDIR}/meshoptimizer
     ${DEFAULT_CMAKE_FLAGS}
-    ${MESHOPTIMIZER_EXTRA_OPTIONS}
+    ${MESHOPTIMIZER_EXTRA_ARGS}
 
   INSTALL_DIR ${LIBDIR}/meshoptimizer
 )
