@@ -2,9 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-set(WAYLAND_PKG_ENV "
-PKG_CONFIG_PATH=${LIBDIR}/expat/lib/pkgconfig:${LIBDIR}/xml2/lib/pkgconfig:${LIBDIR}/ffi/lib/pkgconfig:$PKG_CONFIG_PATH
-")
+set(WAYLAND_PKG_ENV "PKG_CONFIG_PATH=${LIBDIR}/expat/lib/pkgconfig:${LIBDIR}/xml2/lib/pkgconfig:${LIBDIR}/ffi/lib/pkgconfig:$PKG_CONFIG_PATH")
 
 set(WAYLAND_EXTRA_OPTIONS
   -Ddocumentation=false
