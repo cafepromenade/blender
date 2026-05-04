@@ -783,7 +783,6 @@ if(UNIX AND NOT APPLE)
       install(
         PROGRAMS
         ${CMAKE_SOURCE_DIR}/release/bin/blender-launcher
-        ${CMAKE_SOURCE_DIR}/release/bin/blender-softwaregl
         DESTINATION "."
       )
     endif()

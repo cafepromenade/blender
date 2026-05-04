@@ -1,7 +1,0 @@
-#!/bin/sh
-BF_DIST_BIN=$(dirname "$0")
-BF_PROGRAM="blender" # BF_PROGRAM=$(basename "$0")-bin
-
-export LIBGL_ALWAYS_SOFTWARE=1
-
-exec "$BF_DIST_BIN/$BF_PROGRAM" "$@"
