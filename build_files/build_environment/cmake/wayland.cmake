@@ -18,7 +18,6 @@ ExternalProject_Add(external_wayland
   PREFIX ${BUILD_DIR}/wayland
 
   # Use `-E` so the `PKG_CONFIG_PATH` can be defined to link against our own LIBEXPAT/LIBXML2/FFI.
-  #
   CONFIGURE_COMMAND ${CONFIGURE_ENV} &&
     ${CMAKE_COMMAND} -E env ${WAYLAND_PKG_ENV}
     ${MESON} setup
