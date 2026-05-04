@@ -108,6 +108,7 @@ if(DEFINED LIBDIR)
   set(absl_ROOT ${LIBDIR}/abseil)
   set(Ceres_ROOT ${LIBDIR}/ceres)
   set(Eigen3_ROOT ${LIBDIR}/eigen)
+  set(meshoptimizer_ROOT ${LIBDIR}/meshoptimizer)
 endif()
 
 # Wrapper to prefer static libraries
