@@ -596,7 +596,9 @@ if(WITH_CYCLES AND WITH_CYCLES_PATH_GUIDING)
 endif()
 
 if(WITH_TRACY)
-  set(Tracy_ROOT_DIR ${LIBDIR}/tracy)
+  if(DEFINED LIBDIR)
+    set(Tracy_ROOT_DIR ${LIBDIR}/tracy)
+  endif()
   find_package_wrapper(Tracy REQUIRED)
 endif()
 
