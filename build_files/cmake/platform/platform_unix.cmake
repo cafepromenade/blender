@@ -109,6 +109,7 @@ if(DEFINED LIBDIR)
   set(Ceres_ROOT ${LIBDIR}/ceres)
   set(Eigen3_ROOT ${LIBDIR}/eigen)
   set(meshoptimizer_ROOT ${LIBDIR}/meshoptimizer)
+  set(draco_ROOT ${LIBDIR}/draco)
 endif()
 
 # Wrapper to prefer static libraries
@@ -675,8 +676,16 @@ endif()
 add_bundled_libraries(ceres/lib)
 
 if(WITH_DRACO)
-  find_package_wrapper(draco REQUIRED)
-  set_and_warn_library_found("Draco" DRACO_FOUND WITH_DRACO)
+  if(WITH_LIBS_PRECOMPILED OR WITH_STRICT_BUILD_OPTIONS)
+    find_package_wrapper(draco REQUIRED)
+  else()
+    # This isn't a common system library, so disable if it's not found.
+    find_package_wrapper(draco)
+    if(TARGET draco::draco)
+      set(DRACO_FOUND TRUE)
+    endif()
+    set_and_warn_library_found("Draco" DRACO_FOUND WITH_DRACO)
+  endif()
 endif()
 
 if(WITH_MESHOPTIMIZER)
