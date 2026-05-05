@@ -485,6 +485,17 @@ else()
 endif()
 
 # -----------------------------------------------------------------------------
+# Configure Draco
+
+add_library(bf_deps_optional_draco INTERFACE)
+add_library(bf::dependencies::optional::draco ALIAS bf_deps_optional_draco)
+
+if(TARGET draco::draco)
+  target_compile_definitions(bf_deps_optional_draco INTERFACE WITH_DRACO)
+  target_link_libraries(bf_deps_optional_draco INTERFACE draco::draco)
+endif()
+
+# -----------------------------------------------------------------------------
 # Configure meshoptimizer
 
 add_library(bf_deps_optional_meshoptimizer INTERFACE)
@@ -504,15 +515,4 @@ add_library(bf::dependencies::optional::tracy_client ALIAS bf_deps_optional_trac
 if(WITH_TRACY)
   target_compile_definitions(bf_deps_optional_tracy_client INTERFACE WITH_TRACY_CLIENT)
   target_link_libraries(bf_deps_optional_tracy_client INTERFACE Tracy::TracyClient)
-endif()
-
-# -----------------------------------------------------------------------------
-# Configure Draco
-
-add_library(bf_deps_optional_draco INTERFACE)
-add_library(bf::dependencies::optional::draco ALIAS bf_deps_optional_draco)
-
-if(TARGET draco::draco)
-  target_compile_definitions(bf_deps_optional_draco INTERFACE WITH_DRACO)
-  target_link_libraries(bf_deps_optional_draco INTERFACE draco::draco)
 endif()

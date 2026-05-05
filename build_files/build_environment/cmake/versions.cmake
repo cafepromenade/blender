@@ -1485,15 +1485,6 @@ set(CERES_HOMEPAGE http://ceres-solver.org/)
 set(CERES_LICENSE SPDX:BSD-3-Clause)
 set(CERES_COPYRIGHT "Copyright 2023 Google Inc. All rights reserved.")
 
-set(MESHOPTIMIZER_VERSION 1.1)
-set(MESHOPTIMIZER_URI https://github.com/zeux/meshoptimizer/archive/refs/tags/v${MESHOPTIMIZER_VERSION}.zip)
-set(MESHOPTIMIZER_HASH 6aecc2d3b4328f1f5f4127fb16a144de80cc9eb35c32387807c8c04b0b6dbbf3)
-set(MESHOPTIMIZER_HASH_TYPE SHA256)
-set(MESHOPTIMIZER_FILE meshoptimizer-v${MESHOPTIMIZER_VERSION}.zip)
-set(MESHOPTIMIZER_HOMEPAGE https://meshoptimizer.org)
-set(MESHOPTIMIZER_LICENSE SPDX:MIT)
-set(MESHOPTIMIZER_COPYRIGHT "Copyright (c) 2016-2026 Arseny Kapoulkine")
-
 set(DRACO_VERSION 1.5.7)
 set(DRACO_URI https://github.com/google/draco/archive/refs/tags/${DRACO_VERSION}.zip)
 set(DRACO_HASH 27b72ba2d5ff3d0a9814ad40d4cb88f8dc89a35491c0866d952473f8f9416b77)
@@ -1502,6 +1493,15 @@ set(DRACO_FILE meshoptimizer-${DRACO_VERSION}.zip)
 set(DRACO_HOMEPAGE https://google.github.io/draco/)
 set(DRACO_LICENSE SPDX:Apache-2.0)
 set(DRACO_COPYRIGHT "Copyright 2022 The Draco Authors.")
+
+set(MESHOPTIMIZER_VERSION 1.1)
+set(MESHOPTIMIZER_URI https://github.com/zeux/meshoptimizer/archive/refs/tags/v${MESHOPTIMIZER_VERSION}.zip)
+set(MESHOPTIMIZER_HASH 6aecc2d3b4328f1f5f4127fb16a144de80cc9eb35c32387807c8c04b0b6dbbf3)
+set(MESHOPTIMIZER_HASH_TYPE SHA256)
+set(MESHOPTIMIZER_FILE meshoptimizer-v${MESHOPTIMIZER_VERSION}.zip)
+set(MESHOPTIMIZER_HOMEPAGE https://meshoptimizer.org)
+set(MESHOPTIMIZER_LICENSE SPDX:MIT)
+set(MESHOPTIMIZER_COPYRIGHT "Copyright (c) 2016-2026 Arseny Kapoulkine")
 
 # Using a latest main hash as Tracy WoA support (commit feb07e4) hasn't made it to a stable release yet.
 # NOTE: Keep version in sync with the tracy_profiler GUI frontend in `extern/tracy_profiler/CMakeLists.txt`
