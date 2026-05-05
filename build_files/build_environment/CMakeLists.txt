@@ -183,7 +183,7 @@ include(cmake/rubberband.cmake)
 include(cmake/abseil.cmake)
 include(cmake/eigen.cmake)
 include(cmake/ceres.cmake)
-include(cmake/draco)
+include(cmake/draco.cmake)
 include(cmake/meshoptimizer.cmake)
 include(cmake/tracy.cmake)
 # Keep these last.
