@@ -184,6 +184,7 @@ include(cmake/abseil.cmake)
 include(cmake/eigen.cmake)
 include(cmake/ceres.cmake)
 include(cmake/meshoptimizer.cmake)
+include(cmake/draco.cmake)
 include(cmake/tracy.cmake)
 # Keep these last.
 include(cmake/deps_md.cmake)
