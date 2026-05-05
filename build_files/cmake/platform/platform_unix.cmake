@@ -680,8 +680,16 @@ if(WITH_DRACO)
 endif()
 
 if(WITH_MESHOPTIMIZER)
-  find_package_wrapper(meshoptimizer REQUIRED)
-  set_and_warn_library_found("meshoptimizer" MESHOPTIMIZER_FOUND WITH_MESHOPTIMIZER)
+  if(WITH_LIBS_PRECOMPILED OR WITH_STRICT_BUILD_OPTIONS)
+    find_package_wrapper(meshoptimizer REQUIRED)
+  else()
+    # This isn't a common system library, so disable if it's not found.
+    find_package_wrapper(meshoptimizer)
+    if(TARGET meshoptimizer::meshoptimizer)
+      set(MESHOPTIMIZER_FOUND TRUE)
+    endif()
+    set_and_warn_library_found("meshoptimizer" MESHOPTIMIZER_FOUND WITH_MESHOPTIMIZER)
+  endif()
 endif()
 
 # Jack is intended to use the system library.
