@@ -14,6 +14,7 @@ ExternalProject_Add(external_tracy
   PREFIX ${BUILD_DIR}/tracy
   CMAKE_GENERATOR ${PLATFORM_ALT_GENERATOR}
 
+  # Patch to support WinSDK version 22621, separately fixed in upstream PR #1353, remove on version upgrade.
   PATCH_COMMAND ${PATCH_CMD} -p 1 -d
     ${BUILD_DIR}/tracy/src/external_tracy 
     -i ${PATCH_DIR}/tracy_windows_sdk_fix.diff
