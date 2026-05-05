@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 set(MESHOPTIMIZER_EXTRA_ARGS
+  -DMESHOPT_BUILD_SHARED_LIBS=ON
 )
 
 if(WIN32)
